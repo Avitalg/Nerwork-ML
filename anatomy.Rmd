@@ -1,0 +1,56 @@
+---
+title: "Network analysis"
+author: "Nir Shchori && Avital Glazer"
+date: "9 במאי 2016"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(igraph)
+data <- read.csv('ga_edgelist.csv', header=TRUE)
+g <- graph.data.frame(data, directed=FALSE)
+g$layout <- layout.fruchterman.reingold(g)
+```
+
+## Network analysis of Grey anatomy
+
+```{r cars}
+
+plot(g)
+
+b=betweenness(g)
+c=closeness(g)
+d=degree(g)
+e=evcent(g) 
+#max betweenness
+which.max(b)
+
+#max closeness
+which.max(c)
+
+barplot(c)
+
+#max degree
+which.max(d)
+
+barplot(d)
+
+#max Eigencetor
+which.max(e$vector)
+# edge betweennes algoritem
+fc=edge.betweenness.community(g)
+plot(g,vertex.size=6,vertex.color=fc$membership+1,asp=FALSE)
+sizes(fc)
+#walktrap algoritem
+ff=walktrap.community(g)
+plot(g,vertex.size=6,vertex.color=ff$membership+1,asp=FALSE)
+sizes(ff)
+
+
+
+```
+
+
+
+
