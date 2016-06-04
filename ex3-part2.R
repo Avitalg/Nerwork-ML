@@ -2,10 +2,10 @@ install.packages(c('igraph', 'twitteR'))
 library(igraph)
 library(twitteR)
 
-consumer_key <- "o0IEnA0IVQcwq5M5DMAAcxEag"
-consumer_secret <- "HnrtuzZDG7w6HcZPkIN34QdoatMVcjJr9ZOR9THtuVzSH4qblf"
-access_token <- "2749462364-zjitovYLn4l0yk5QSWjVPt3JSlDdx60nBjKxzf1"
-access_secret <- "CzGP68o5vyyCuv9O5z8EmVcTQqn7qTlxVYIfqRSKBBdMb"
+consumer_key <- "oEnM5D52MAAcxEag"
+consumer_secret <- "Hnrtu4554VzSH4qblf"
+access_token <- "2749k5QSWjVPt3JSlDdxjK"
+access_secret <- "CzGP68o53344xVYIfqRSKb"
 options(httr_oauth_cache=T) #This will enable the use of a local file to cache OAuth access credentials between R sessions.
 setup_twitter_oauth(consumer_key,
                     consumer_secret,
