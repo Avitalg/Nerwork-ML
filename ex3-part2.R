@@ -13,7 +13,7 @@ setup_twitter_oauth(consumer_key,
                     access_secret)
 
 
-start<-getUser("avitalg1") 
+start<-getUser("avitalg") 
 
 
 friends.object<-lookupUsers(start$getFriendIDs())
